@@ -7,7 +7,7 @@
 
 extern float x[2],y[100],x0,yq;
 extern float xb[2],yb[100],x1,ya;
-extern int n,no,i,j,a[50];
+extern int n,no,i,j,a[50],frame[10];
 
 //GLfloat color[][3] = {{0,1,0},{1,0,0},{0,0,1},{1,1,0},{1,0,1},{0,1,1}};
 //create frame mesh
@@ -63,6 +63,27 @@ void ipage()
         	        glVertex2f(xb[i+1],yb[j+1]);
 					glVertex2f(xb[i+1],yb[j]);
                 glEnd();
+			
+			glColor3f(0.0,0.0,0.0);
+			glLineWidth(5.0);
+		        glBegin(GL_LINE_LOOP);
+				glVertex2f(xb[i+1],yb[j]);
+                   		glVertex2f(xb[i+1],yb[j+1]);
+        		        glVertex2f(xb[i+1]+20,yb[j+1]);
+				glVertex2f(xb[i+1]+20,yb[j]);
+         	       glEnd();
+				
+			glColor3f(0.5,0.5,0.5);
+			glLineWidth(5.0);
+                glBegin(GL_QUADS);
+					glVertex2f(xb[i+1],yb[j]);
+                   	glVertex2f(xb[i+1],yb[j+1]);
+        	        glVertex2f(xb[i+1]+20,yb[j+1]);
+					glVertex2f(xb[i+1]+20,yb[j]);
+                glEnd();
+			
+			
+			
 		}		
         for(int hj = 0;hj<n;hj++)
         {

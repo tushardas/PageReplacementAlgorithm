@@ -46,7 +46,6 @@ void display()
 
     
         
-
     
     gprint(150,450,0,name);
 

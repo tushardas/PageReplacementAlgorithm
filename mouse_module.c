@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<GL/glut.h>
 
-
 void mymouse(int btn, int state, int xn, int yn)
 {
     if (btn == GLUT_LEFT_BUTTON && state == GLUT_DOWN ) //mouse event
@@ -11,6 +10,4 @@ void mymouse(int btn, int state, int xn, int yn)
     }
 
     glutPostRedisplay();
-
 }
-
