@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<GL/glut.h>
 		 		 //for
-#define   dx 120  //frame
+#define   dx 80  //frame
 #define   dy 30  //mesh
-#define   idx 100 //for page string mesh
+#define   idx 80 //for page string mesh
 
 extern float x[2],y[100],x0,yq;
 extern float xb[2],yb[100],x1,ya;
