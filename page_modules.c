@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<GL/glut.h>
+
 		 		 //for
 #define   dx 80  //frame
 #define   dy 30  //mesh
@@ -7,8 +8,8 @@
 
 extern float x[2],y[100],x0,yq;
 extern float xb[2],yb[100],x1,ya;
-extern int n,no,i,j,a[50],frame[10];
-
+extern int n,no,i,j,a[50],frame[10],stage;
+int bitx[50],bity[50],bitx1[10],bity1[10];
 //GLfloat color[][3] = {{0,1,0},{1,0,0},{0,0,1},{1,1,0},{1,0,1},{0,1,1}};
 //create frame mesh
 void page()
@@ -86,10 +87,11 @@ void ipage()
 			
 		}		
         for(int hj = 0;hj<n;hj++)
-        {
-                int g = (xb[0]+xb[1])/2;
-                int h = (yb[hj]+yb[hj+1])/2;
-                gwindowop((char)a[n-hj-1], g , h ,40);
+        {		
+				bitx[hj] = (xb[0]+xb[1])/2;
+                bity[hj] = (yb[hj]+yb[hj+1])/2;
+				
+                gwindowop(a[n-hj-1], bitx[hj] , bity[hj]);
 			
  	    }
  	        		

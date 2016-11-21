@@ -8,15 +8,16 @@ extern int stage,n,no,frame[10];
 void abc()
 {		
 		
-     	if(stage >= n){
+     	if(stage > n-1){
 			        	printf("\nprocess terminated\n");
 				
 				//exit(0);
 		 }
         else                                        //after every left click next stage will be execute   
-			fcfs(stage);
+		{	fcfs(stage);
          
-        stage++;
+        	
+		}
 //	glFlush();
 }
 

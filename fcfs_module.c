@@ -3,6 +3,7 @@
 
 
 //fcfs algorithm
+int tempframeNum;
 extern int a[50],avail,no,k,frame[10],frameNum,count;
 void fcfs(int stage)
 {
@@ -24,6 +25,7 @@ void fcfs(int stage)
         if (avail==0)
         {
                 frame[frameNum]=a[stage];
+                tempframeNum = frameNum;
                 frameNum=(frameNum+1)%no;
                 count++;
                 for(k=0;k<no;k++)
