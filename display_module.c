@@ -33,7 +33,8 @@ void display()
     //arrow(1);
 
 if(flag == 1 ){
-    arrow(90,50);
+
+    arrow(225,(int)yb[n-stage-1]);
         for(int k=0;k<no;k++)
         {
             bitx1[k] = (x[0]+x[1])/2;

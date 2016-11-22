@@ -3,7 +3,7 @@
 #include<GL/glut.h>
 
 
-extern int stage,n,no,frame[10];
+extern int stage,n,no,frame[10],yb[100];
 
 void abc()
 {		
