@@ -8,7 +8,7 @@
 
 
 /*Global variables*/
-int k=0,i,j,frameNum = 0,flag=0,n,a[50],no,avail,count=0,stage=0,q=0,r=0,time;
+int k=0,i,j,frameNum = 0,flag=0,n,a[50],no,avail,count=0,stage=0,q=0,r=0,time,choice=-1;
 GLfloat speed = 0.1f;
 int frame[10]; //pages in the frame after every stage
 GLfloat x[2] = {0,0} , y[100] = {0} , x0 = 400.0 , yq = 150.0; //frames mesh

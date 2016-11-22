@@ -3,10 +3,11 @@
 
 extern float x[2],y[100];
 extern float xb[2],yb[100];
-extern int flag,n,stage,frame[10],no,a[50],count,time,bitx[50],bity[50],bitx1[10],bity1[10],avail,tempframeNum,k;
+extern int choice,flag,n,stage,frame[10],no,a[50],count,time,bitx[50],bity[50],bitx1[10],bity1[10],avail,tempframeNum,k;
 int j =0;
-char name[] = "First In First Out";
+char name[][23] = {{"First In First Out"},{"Least Recently Used"}};
 char pf[] = "Page Fault is:- ";
+char underline[] = "_____________________";
 char c[2];
 int k1 = 20, l= 400;
     int e = 20;
@@ -34,8 +35,8 @@ void display()
 
 if(flag == 1 ){
 
-    arrow(225,(int)yb[n-stage-1]);
-        for(int k=0;k<no;k++)
+    arrow(230,(int)yb[n-stage-1]+10);
+    for(int k=0;k<no;k++)
         {
             bitx1[k] = (x[0]+x[1])/2;
                 bity1[k] = (y[k]+y[k+1])/2;
@@ -101,7 +102,9 @@ if(flag == 1 ){
 
 
 
-    gprint(300,450,0,name);
+    gprint(300,450,0,name[0]);
+    gprint(295,440,0,underline);
+    
 
     glColor3f(1.0,1.0,1.0);
     

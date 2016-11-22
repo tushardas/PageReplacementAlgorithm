@@ -7,7 +7,7 @@
             "request": "launch",
             "preLaunchTask": "make",
             "program": "${workspaceRoot}/a.out",
-            "args": [],
+            "args": ["<inputfile.txt>"],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
