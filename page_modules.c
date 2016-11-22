@@ -55,7 +55,20 @@ void ipage()
         		        glVertex2f(xb[i+1],yb[j+1]);
 				glVertex2f(xb[i+1],yb[j]);
          	       glEnd();
-				
+
+			if(j==stage){
+
+				glColor3f(0.0,0.0,0.0);
+			glLineWidth(5.0);
+		        glBegin(GL_LINE_LOOP);
+				glVertex2f(xb[i],yb[j]);
+                   		glVertex2f(xb[i],yb[j+1]);
+        		      
+				glVertex2f(xb[i+1],yb[j]);
+				  glVertex2f(xb[i+1],yb[j+1]);
+         	       glEnd();
+	
+			}	
 			glColor3f(0.5,0.5,0.5);
 			glLineWidth(5.0);
                 glBegin(GL_QUADS);
@@ -82,6 +95,8 @@ void ipage()
         	        glVertex2f(xb[i+1]+20,yb[j+1]);
 					glVertex2f(xb[i+1]+20,yb[j]);
                 glEnd();
+
+			
 			
 			
 			
