@@ -7,7 +7,7 @@ extern int choice,flag,n,stage,frame[10],no,a[50],count,time,bitx[50],bity[50],b
 int j =0;
 char name[][23] = {{"First In First Out"},{"Least Recently Used"}};
 char pf[] = "Page Fault is:- ";
-char underline[] = "_____________________";
+char underline[] = "_________________";
 char c[2];
 int k1 = 20, l= 400;
     int e = 20;
@@ -26,7 +26,7 @@ void display()
         glVertex2i(220,10);
     glEnd();
     */
-    gprint(140,125,0,pf);
+    gprint(180,125,0,pf);
     ipage();
    // menu();
     page();
@@ -39,7 +39,7 @@ void display()
 for(int k=0;k<no;k++)
     gwindowop(frame[no-k-1],bitx1[k] ,bity1[k]);
 if(stage < n)
-    arrow(45,(int)yb[n-stage-1]+10);
+    arrow(35,(int)yb[n-stage-1]+10);
 if(flag == 1 ){
 
     
@@ -117,7 +117,7 @@ if(flag == 1 ){
     m[1] = count%10 + 48;
 
     //if((cnt-1)%10 == 0)  k+=20;
-    gprint(220,125,0,m);
+    gprint(260,125,0,m);
         //gprint(20,400,0,name);
         
     glFlush();
