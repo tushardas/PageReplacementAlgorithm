@@ -4,7 +4,7 @@
 
 //fcfs algorithm
 int tempframeNum;
-extern int a[50],avail,no,k,frame[10],frameNum,count;
+extern int a[50],avail,no,k,frame[10],frameNum,count,n,bitx[50],bity[50],bitx1[10],bity1[10];
 void fcfs(int stage)
 {
 	printf("\tref string\t page frames\n");
@@ -20,7 +20,7 @@ void fcfs(int stage)
                         printf("%d\t",frame[k]);
 
                 }
-
+                glutPostRedisplay();
         }
         if (avail==0)
         {
@@ -30,9 +30,16 @@ void fcfs(int stage)
                 count++;
                 for(k=0;k<no;k++)
                 	printf("%d\t",frame[k]);
+               
         }
 	printf("\n");
 	printf("Page Fault Is %d\n\n",count);
+        gwindowopf(a[stage],bitx[n-stage-1],bity[n-stage-1],bitx1[no-tempframeNum-1],bity1[no-tempframeNum-1]);
+        //stage++;
+        //glutPostRedisplay();
+       // gwindowopf(a[stage],bitx[n-stage-1],bity[n-stage-1],bitx1[no-k-1],bity1[no-k-1]);
+        
+       // gwindowopf(,2000,2000,2000,2000);
 }
 
 

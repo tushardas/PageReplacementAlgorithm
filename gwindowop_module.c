@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<GL/glut.h>
-
+extern int flag,stage;
 //function to display characters on graphic window
 void gwindowop(int p,int x,int y)
 {
@@ -31,15 +31,15 @@ void gwindowopf(int p,int x,int y ,int x1,int y1)
         for(int q=0;q<1000;q++)
         for(int z=0;z<100;z++);
         glColor3f(0.2,0.1,0.4);
-    glRasterPos2f(xu,yu);
-    glutBitmapCharacter( GLUT_BITMAP_8_BY_13 , p+48 );
+        glRasterPos2f(xu,yu);
+        glutBitmapCharacter( GLUT_BITMAP_8_BY_13 , p+48 );
         
         
     }   
     
         
-    glColor3f(1.0,1.0,1.0);
-    glRasterPos2f(x1,y1);
-    glutBitmapCharacter( GLUT_BITMAP_8_BY_13 , p+48 );
+    flag = 0;
+    stage++;
+    glutPostRedisplay();
     
 }

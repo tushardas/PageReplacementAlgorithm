@@ -12,6 +12,7 @@ extern int n,no,i,j,a[50],frame[10],stage;
 int bitx[50],bity[50],bitx1[10],bity1[10];
 //GLfloat color[][3] = {{0,1,0},{1,0,0},{0,0,1},{1,1,0},{1,0,1},{0,1,1}};
 //create frame mesh
+
 void page()
 {
 	for(i=0;i<2;i++)
@@ -32,6 +33,11 @@ void page()
 				glVertex2f(x[i+1],y[j]);
  		       	glEnd();
 		}
+		for(int k=0;k<no;k++)
+        {
+            bitx1[k] = (x[0]+x[1])/2;
+                bity1[k] = (y[k]+y[k+1])/2;
+        }
 }
 
 
@@ -56,8 +62,8 @@ void ipage()
 				glVertex2f(xb[i+1],yb[j]);
          	       glEnd();
 
-			if(j==stage){
-
+/*			if(j==stage){
+/*
 				glColor3f(0.0,0.0,0.0);
 			glLineWidth(5.0);
 		        glBegin(GL_LINE_LOOP);
@@ -68,7 +74,7 @@ void ipage()
 				  glVertex2f(xb[i+1],yb[j+1]);
          	       glEnd();
 	
-			}	
+			}*/	
 			glColor3f(0.5,0.5,0.5);
 			glLineWidth(5.0);
                 glBegin(GL_QUADS);
@@ -80,22 +86,22 @@ void ipage()
 			
 			glColor3f(0.0,0.0,0.0);
 			glLineWidth(5.0);
-		        glBegin(GL_LINE_LOOP);
+		       /* glBegin(GL_LINE_LOOP);
 				glVertex2f(xb[i+1],yb[j]);
                    		glVertex2f(xb[i+1],yb[j+1]);
         		        glVertex2f(xb[i+1]+20,yb[j+1]);
 				glVertex2f(xb[i+1]+20,yb[j]);
          	       glEnd();
-				
+				*/
 			glColor3f(0.5,0.5,0.5);
 			glLineWidth(5.0);
-                glBegin(GL_QUADS);
+            /*    glBegin(GL_QUADS);
 					glVertex2f(xb[i+1],yb[j]);
                    	glVertex2f(xb[i+1],yb[j+1]);
         	        glVertex2f(xb[i+1]+20,yb[j+1]);
 					glVertex2f(xb[i+1]+20,yb[j]);
                 glEnd();
-
+*/
 			
 			
 			

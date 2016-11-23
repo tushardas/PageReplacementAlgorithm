@@ -11,8 +11,8 @@
 int k=0,i,j,frameNum = 0,flag=0,n,a[50],no,avail,count=0,stage=0,q=0,r=0,time,choice=-1;
 GLfloat speed = 0.1f;
 int frame[10]; //pages in the frame after every stage
-GLfloat x[2] = {0,0} , y[100] = {0} , x0 = 400.0 , yq = 150.0; //frames mesh
-GLfloat x1 = 250.0, ya = 120,xb[2] = {0,0} , yb[100] = {0};     //page string mesh
+GLfloat x[2] = {0,0} , y[100] = {0} , x0 = 220.0 , yq = 200.0; //frames mesh
+GLfloat x1 = 70.0, ya = 170,xb[2] = {0,0} , yb[100] = {0};     //page string mesh
 
 
 /*function declartions*/
@@ -27,6 +27,7 @@ void abc();
 void mymouse();
 void init();
 void blink();
+void myReshape();
 void gwindowopf(int,int,int,int,int);
 
 
@@ -36,13 +37,13 @@ int main(int argc,char **argv)
     input();
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-    glutInitWindowSize(1500,1500);
+    glutInitWindowSize(1200,1200);
 
     glutCreateWindow("FCFS");
     
     glutMouseFunc(mymouse);
     
-  
+    // glutReshapeFunc(myReshape);
     glutDisplayFunc(display);
   
     //glutPostRedisplay();

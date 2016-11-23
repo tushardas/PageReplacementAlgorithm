@@ -21,27 +21,29 @@ void display()
 
     glColor3f(1.0,0.0,0.5);
     
-    glBegin(GL_LINES);
+    /*glBegin(GL_LINES);
         glVertex2i(220,400);
         glVertex2i(220,10);
     glEnd();
-    
-    gprint(325,75,0,pf);
+    */
+    gprint(140,125,0,pf);
     ipage();
-    menu();
+   // menu();
     page();
     //arrow(0);
     //arrow(1);
 
+
+    
+
+for(int k=0;k<no;k++)
+    gwindowop(frame[no-k-1],bitx1[k] ,bity1[k]);
+if(stage < n)
+    arrow(45,(int)yb[n-stage-1]+10);
 if(flag == 1 ){
 
-    arrow(230,(int)yb[n-stage-1]+10);
-    for(int k=0;k<no;k++)
-        {
-            bitx1[k] = (x[0]+x[1])/2;
-                bity1[k] = (y[k]+y[k+1])/2;
-        }
-    for(int k =0;k<no;k++)
+    
+    /*for(int k =0;k<no;k++)
     {
 
                 glColor3f(1.0,1.0,1.0);
@@ -65,7 +67,7 @@ if(flag == 1 ){
         glutBitmapCharacter( GLUT_BITMAP_8_BY_13 , 7+48 );
 */
 
-    if(stage > n-1)  gprint(325,30,0,"Process Terminated!!!" );
+    if(stage > n-1)  gprint(140,80,0,"Process Terminated!!!" );
     
   /*      
 
@@ -100,10 +102,10 @@ if(flag == 1 ){
 	printf("Page Fault Is %d\n\n",count);
 */
 
+}
 
-
-    gprint(300,450,0,name[0]);
-    gprint(295,440,0,underline);
+    gprint(120,450,0,name[0]);
+    gprint(115,440,0,underline);
     
 
     glColor3f(1.0,1.0,1.0);
@@ -115,7 +117,7 @@ if(flag == 1 ){
     m[1] = count%10 + 48;
 
     //if((cnt-1)%10 == 0)  k+=20;
-    gprint(410,75,0,m);
+    gprint(220,125,0,m);
         //gprint(20,400,0,name);
         
     glFlush();

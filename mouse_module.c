@@ -3,13 +3,13 @@
 extern int stage,n,flag;
 void mymouse(int btn, int state, int x, int y)
 {
-    if (btn == GLUT_LEFT_BUTTON && state == GLUT_DOWN && x <=1500 && x>=750 ) //mouse event
+    if (btn == GLUT_LEFT_BUTTON && state == GLUT_DOWN) //mouse event
     {
         if(stage < n)
         {  abc();
             flag = 1;
             
-          glutPostRedisplay();
+          //glutPostRedisplay();
         }
           
     }
