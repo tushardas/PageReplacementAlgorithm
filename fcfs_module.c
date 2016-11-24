@@ -35,7 +35,7 @@ void fcfs(int stage)
 	printf("\n");
 	printf("Page Fault Is %d\n\n",count);
         gwindowopf(a[stage],bitx[n-stage-1],bity[n-stage-1],bitx1[no-tempframeNum-1],bity1[no-tempframeNum-1]);
-        //stage++;
+        
         glutPostRedisplay();
        // gwindowopf(a[stage],bitx[n-stage-1],bity[n-stage-1],bitx1[no-k-1],bity1[no-k-1]);
         
