@@ -1,2 +1,2 @@
 all:
-	gcc *.c -g -lGL -lGLU -lglut
+	gcc -g *.c -lGL -lGLU -lglut -o a.out

@@ -1,24 +1,26 @@
 #include<stdio.h>
 #include<GL/glut.h>
-extern int stage,n,flag;
+extern int stage,n,count,flag,no,frame[];
+int choice = -1;
 void mymouse(int btn, int state, int x, int y)
 {
-    if (btn == GLUT_LEFT_BUTTON && state == GLUT_DOWN) //mouse event
+    if (btn == GLUT_LEFT_BUTTON && state == GLUT_DOWN ) //mouse event
     {
-        if(stage < n)
-        {  abc();
-            flag = 1;
-            
-          //glutPostRedisplay();
-        }
-          
+        flag =1;
+        count =0;
+           choice = 1;         
+           for(int i=0;i<n;i++) frame[i] = -1;
     }
 
-    /*if (btn == GLUT_LEFT_BUTTON && state == GLUT_DOWN && x <=50 && x>=20 && y<=300 && y>=200 ) //mouse event
-    {
-           gprint(20,500,0,"abcd");
-           printf("abcd");
-    }*/
-
     
+    if (btn == GLUT_RIGHT_BUTTON && state == GLUT_DOWN ) //mouse event
+    {
+        flag =2;
+        count =0;
+           choice = 2; 
+           for(int i=0;i<n;i++) frame[i] = -1;
+           
+    }
+
+
 }

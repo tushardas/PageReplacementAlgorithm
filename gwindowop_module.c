@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<GL/glut.h>
-extern int flag,stage,avail;
+extern int flag,stage,avail,stagel,choice;
 //function to display characters on graphic window
 void gwindowop(int p,int x,int y)
 {
@@ -39,7 +39,11 @@ void gwindowopf(int p,int x,int y ,int x1,int y1)
     
         
     flag = 0;
-    stage++;
+   /* if(choice == 1)
+        stage++;
+    
+    if(choice == 2)
+        stagel++;*/
     glutPostRedisplay();
     
 }
