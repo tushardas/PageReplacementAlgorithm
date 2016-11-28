@@ -8,7 +8,7 @@
 
 extern float x[2],y[100],x0,yq;
 extern float xb[2],yb[100],x1,ya;
-extern int n,no,i,j,a[50],frame[10],stage;
+extern int n,no,i,j,a[50],frame[10],stage,choice;
 int l,xbl[2],ybl[100],xl[2],yl[100],bitxl1[100],bityl1[100],bitxl[100],bityl[100];
 int bitx[50],bity[50],bitx1[10],bity1[10];
 //GLfloat color[][3] = {{0,1,0},{1,0,0},{0,0,1},{1,1,0},{1,0,1},{0,1,1}};
@@ -39,6 +39,12 @@ void page(int x0,int yq)
             bitx1[k] = (x[0]+x[1])/2;
                 bity1[k] = (y[k]+y[k+1])/2;
         }
+
+		if(choice == -1)
+		for(int i=0;i<no;i++)
+		{
+			gwindowop(frame[i],bitx1[i],bity1[i]);
+		}
 }
 
 

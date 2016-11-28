@@ -2,7 +2,7 @@
 
 void arrow(GLint x,GLint y)
 {
-	glColor3f(1.0,1.0,0.0);
+	glColor3f(0.5,1.0,0.5);
 	//glRotatef(90.0,0.0,1.0,0.0);
 	glBegin(GL_POLYGON);
 	glVertex2i(x,y);

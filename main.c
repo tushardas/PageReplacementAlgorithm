@@ -8,7 +8,7 @@
 
 
 /*Global variables*/
-int k=0,i,j,frameNum = 0,flag=0,n,a[50],no,avail,count=0,stage=0,q=0,r=0,time,stagel=0;
+int k=0,i,j,frameNum = 0,flag=0,n,a[50],no,avail,count=0,stage=0,q=0,r=0,time,stagel=0,id1,id2;
 GLfloat speed = 0.1f;
 int frame[10]; //pages in the frame after every stage
 GLfloat x[2] = {0,0} , y[100] = {0} , x0 = 135.0 , yq = 105.0; //frames mesh
@@ -30,8 +30,10 @@ void blink();
 void key(unsigned char,int,int);
 void myReshape();
 void gwindowopf(int,int,int,int,int);
-
-
+void mouse(int,int,int,int);
+void initial_display();
+void menu_handler(int);
+void restart_menu();
 /*main function*/
 int main(int argc,char **argv)
 {
@@ -39,14 +41,19 @@ int main(int argc,char **argv)
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(1500,1500);
-
-    glutCreateWindow("FCFS");
-    
+    glutCreateWindow("FIFO and LRU");  
     glutMouseFunc(mymouse);
     glutKeyboardFunc(key);
-    // glutReshapeFunc(myReshape);
+    //if(setwindow)
     glutDisplayFunc(display);
-  
+
+   // glutDisplayFunc(initial_display);
+
+    glutCreateMenu(menu_handler);
+    glutAddMenuEntry("Restart",1);
+    glutAddMenuEntry("Quit",2);
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+
     //glutPostRedisplay();
     init();
     glutMainLoop();

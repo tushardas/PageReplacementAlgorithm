@@ -14,10 +14,10 @@ void gwindowopf(int p,int x,int y ,int x1,int y1)
     float i,delx,dely,yu,xu;
     float m;
     m = ((float)(y1-y)/(float)(x1-x));
-    delx = (x1-x)/8;
+    delx = (x1-x)/4;
     glColor3f(1.0,0.0,0.0);
     if(avail == 0)
-    for(float i=1;i<8;i+=1){
+    for(float i=1;i<4;i+=1){
         
         xu = x+i*delx;
         yu = m*(xu-x)+y;
@@ -39,11 +39,6 @@ void gwindowopf(int p,int x,int y ,int x1,int y1)
     
         
     flag = 0;
-   /* if(choice == 1)
-        stage++;
-    
-    if(choice == 2)
-        stagel++;*/
     glutPostRedisplay();
     
 }

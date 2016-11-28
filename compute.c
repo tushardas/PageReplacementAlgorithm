@@ -8,8 +8,8 @@ void compute()
 {
     if(choice == 1)
     {
-        int x0 = 135, yq = 100;
-        int x1 = 35, ya = 105;
+        int x0 = 135, yq = 135;
+        int x1 = 35, ya = 100;
 
         for(int i=0;i<2;i++)
 		    x[i]=x0+i*dx;
@@ -39,8 +39,8 @@ void compute()
 
     if(choice == 2)
     {
-        int x0l = 375, yql = 100;
-        int x1l = 275, yal = 105;
+        int x0l = 375, yql = 135;
+        int x1l = 275, yal = 100;
 
         for(int i=0;i<2;i++)
 		    xl[i]=x0l+i*dx;
