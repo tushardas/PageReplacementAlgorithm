@@ -58,12 +58,19 @@ void display()
     gprint(280,330,0,"Least Recently Used");
     gprint(277,320,0,"__________________");
 
+    
+    
+
+
     ipage(35,100);
     page(135,135);
 
    ipage(275,100);
     page(375,135);
 
+    gprint(25,295,0,"Reference String                 Memory Frames");
+    gprint(265,295,0,"Reference String                 Memory Frames");
+    
 if(choice<1)
 {
      arrow(260,l);   

@@ -17,7 +17,7 @@ void gwindowopf(int p,int x,int y ,int x1,int y1)
     delx = (x1-x)/4;
     glColor3f(1.0,0.0,0.0);
     if(avail == 0)
-    for(float i=1;i<4;i+=1){
+    for(float i=1;i<4;i+=0.05){
         
         xu = x+i*delx;
         yu = m*(xu-x)+y;
@@ -28,7 +28,7 @@ void gwindowopf(int p,int x,int y ,int x1,int y1)
         glFlush();
         glutSwapBuffers();
        for(int t=0;t<1000;t++)
-        for(int q=0;q<800;q++)
+        for(int q=0;q<80;q++)
         for(int z=0;z<100;z++);
         glColor3f(0.2,0.1,0.4);
         glRasterPos2f(xu,yu);

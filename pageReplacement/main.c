@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 #include<GL/glut.h>
 
 #define   maxx 2 //for
@@ -37,10 +39,14 @@ void restart_menu();
 /*main function*/
 int main(int argc,char **argv)
 {
+    //n = (int)argv[1][0]-48;
+    //for(int i=0;i<n+2;i++)  a[i] = (int)argv[2][i]-48;
+    //no = (int)argv[3][0]-48;
     input();
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(1500,1500);
+
     glutCreateWindow("FIFO and LRU");  
     glutMouseFunc(mymouse);
     glutKeyboardFunc(key);
